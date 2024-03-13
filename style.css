@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,12 +10,32 @@ header {
     background-image: url("./images/gato.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     width: 100%;
-    height: 400px;
+    height: 520px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Georgia, arial;
+    color: white;
+    position: relative;
+}
+
+header h1 {
+    z-index: 200;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+header::after{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.384);
+    z-index: 100;
 }
 
 nav {
@@ -27,5 +49,81 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 16px 24px;
+    z-index: 1000;
+    color: #fff;
+
 }
 
+.navegacao ul{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    font-family: "Lato", sans-serif;
+
+}
+
+
+.navegacao a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navegacao a svg{
+    fill: white;
+    width: 15px;
+    height: 15px;
+}
+
+section{
+    width: 60%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+gap: 15px;
+margin-top: 30px;
+
+}
+
+.card{
+    width: 100%;
+    text-align: center;
+}
+
+.card .image{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 240px;
+}
+
+#chu {
+    background-image: url("./images/chu.jpg");
+}
+
+#cna {
+    background-image: url("./images/cna.jpg");
+}
+
+#lin {
+    background-image: url("./images/linguagens.png");
+}
+
+#mat {
+    background-image: url("./images/matematica.jpg");
+}
+
+#tec {
+    background-image: url("./images/tecnico\ 1.png");
+}
+
+.maior {
+    margin-top: 40px;
+    grid-column: 1 / span 2;
+}
